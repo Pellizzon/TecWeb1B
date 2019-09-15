@@ -1,0 +1,16 @@
+CREATE TABLE cadastro (
+ id INT NOT NULL AUTO_INCREMENT,
+ name VARCHAR(32) NOT NULL,
+ user VARCHAR(32) NOT NULL,
+ password VARCHAR(32) NOT NULL,
+ PRIMARY KEY (ID)
+);
+
+CREATE TABLE notes (
+ id INT NOT NULL AUTO_INCREMENT,
+ user VARCHAR(32) NOT NULL,
+ date DATE NOT NULL,
+ priority enum("Baixa", "Mediana", "Alta") NOT NULL,
+ msg VARCHAR(50) NOT NULL,
+ PRIMARY KEY (ID)
+);

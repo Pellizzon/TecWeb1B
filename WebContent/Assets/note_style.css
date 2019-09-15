@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+html * {
+	font-size: .9rem;
+	color: #000;
+	font-family: Arial;
+}
+
+/*Adaptado de https://mentormate.com/blog/css-postit-note/:*/
+.infos {
+	line-height:normal;
+	text-align:center;     
+	width: 200px;    
+	margin: 5px;    
+	min-height:120px;
+	max-height:120px;
+	padding-top:20px;
+	border:1px solid #E8E8E8;  
+	border-top:25px solid #fdfd86;
+	border-left-color: #ffffff;
+	border-right-color: #ffffff;
+	border-bottom-color: #ffffff;   
+	border-bottom-right-radius: 60px 10px;
+	overflow-wrap: break-word;
+	background: -moz-linear-gradient(-45deg, #ffff88 81%, #ffff88 82%, #ffff88 82%, #ffffc6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(81%,#ffff88), color-stop(82%,#ffff88), color-stop(82%,#ffff88), color-stop(100%,#ffffc6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* IE10+ */
+	background: linear-gradient(135deg, #ffff88 81%,#ffff88 82%,#ffff88 82%,#ffffc6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffff88', endColorstr='#ffffc6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+body {
+	margin: 20px;
+	background-color: #ffffff;
+}
+
+.button {
+	background-color: #ddd;
+	width: 200px;
+	margin-left: 5px;
+	padding: 11px;
+	border-radius: 3px;
+	border: none;
+}
+
+.actionButton {
+	background-color: #ddd;
+	width: auto;
+	padding: 11px;
+	margin-top: 5px;
+	border-radius: 3px;
+	border: none;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.myNotes {
+	height: 100%;
+	margin: 3px;
+	margin-left: 30px;
+}
+
+.input-res {
+	color: #333;
+	width: auto;
+	height: 40px;
+	background-color: #ddd;
+	border: none;
+	padding: 11px;
+	border-radius: 3px;
+	margin: 5px;
+	box-sizing: border-box;
+	resize:none;
+}
+
+.sair {
+	background-color: #ddd;
+	width: auto;
+	padding: 11px;
+	text-align: center;
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	margin: 5px;
+	border-radius: 3px;
+	border: none;
+}
