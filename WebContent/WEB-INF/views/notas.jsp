@@ -20,6 +20,26 @@
 	    h.style.width = "auto";
 	    h.style.width = (h.scrollWidth)+"px";
 	}
+	
+	function Search() {
+		  // Declare variables
+		  var input, filter, notes, note, i, txtValue;
+		  input = document.getElementById('myInput');
+		  filter = input.value.toUpperCase();
+		  notes = document.getElementsByClassName("myNotes");
+		  console.log(notes);
+		
+		  // Loop through all list items, and hide those who don't match the search query
+		  for (i = 0; i < notes.length; i++) {
+		    note = notes[i].getElementsByTagName("span")[0];
+		    txtValue = note.textContent || note.innerText;
+		    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		      notes[i].style.display = "";
+		    } else {
+		      notes[i].style.display = "none";
+		    }
+		  }
+		}
 </script>
 </head>
 
@@ -68,6 +88,7 @@
 		<input type="submit" name="variable" class="actionButton" value="Prioridade">
 		<input type="submit" name="variable" class="actionButton" value="Remover Ordenação">
 	</form><br>
+	Buscar: <input type="text" id="myInput" class="input-res" onkeyup="Search()" placeholder="Procurar por tarefas">
 	<div class='container'>
 	<c:forEach var="note" items="<%=dao.getFiltro(filtro)%>" varStatus="id">
 		<div class="myNotes">
@@ -78,10 +99,10 @@
 			</c:choose>
 			<div style="background-color:<%=color%>; border-top-color:<%=color%>" class="infos">
 				N°: ${id.count}<br> 
-				Usuário: ${note.user}<br> 
+				Usuário: ${note.user}<br>
 				Data: <fmt:formatDate value="${note.date.time}" pattern="dd/MM/yyyy"/><br> 
 				Prioridade: ${note.priority}<br>
-				Tarefa: ${note.msg}
+				Tarefa: <span>${note.msg}</span>
 			</div>
 			<form action="edita" method="get" autocomplete="off">
 				<input type="hidden" name="user" value="<%=current_user%>" readonly>

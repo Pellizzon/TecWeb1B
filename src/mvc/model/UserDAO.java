@@ -8,13 +8,13 @@ import java.sql.SQLException;
 
 public class UserDAO {
 	private Connection connection = null;
-//	String url = System.getenv("mysql_url");
-//	String user = System.getenv("mysql_user");
-//	String password = System.getenv("mysql_password");
+	String url = System.getenv("mysql_url");
+	String user = System.getenv("mysql_user");
+	String password = System.getenv("mysql_password");
 
-	String url = "jdbc:mysql://localhost/meus_dados";
-	String user = "root";
-	String password = "38117111";
+//	String url = "jdbc:mysql://localhost/meus_dados";
+//	String user = "root";
+//	String password = "38117111";
 
 	public UserDAO() {
 		try {
