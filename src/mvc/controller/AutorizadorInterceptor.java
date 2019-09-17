@@ -9,11 +9,11 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object controller)
 			throws Exception {
-		String uri = request.getRequestURI();
-		if (uri.endsWith("entrar") || uri.endsWith("cadastrar") || uri.endsWith("efetuaCadastro")
-				|| uri.endsWith("efetuaLogin")) {
-			return true;
-		}
+//		String uri = request.getRequestURI();
+//		if (uri.endsWith("entrar") || uri.endsWith("cadastrar") || uri.endsWith("efetuaCadastro")
+//				|| uri.endsWith("efetuaLogin")) {
+//			return true;
+//		}
 		if (request.getSession().getAttribute("name") != null) {
 			return true;
 		}
