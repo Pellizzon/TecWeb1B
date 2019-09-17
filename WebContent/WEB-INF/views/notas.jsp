@@ -27,7 +27,6 @@
 		  input = document.getElementById('myInput');
 		  filter = input.value.toUpperCase();
 		  notes = document.getElementsByClassName("myNotes");
-		  console.log(notes);
 		
 		  // Loop through all list items, and hide those who don't match the search query
 		  for (i = 0; i < notes.length; i++) {

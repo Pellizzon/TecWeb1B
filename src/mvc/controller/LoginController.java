@@ -37,12 +37,16 @@ public class LoginController {
 			} else {
 				return "erroSignup";
 			}
-			
+
 		}
 	}
 
 	@RequestMapping("efetuaLogin")
 	public String efetuaLogin(User usuario, HttpSession session) {
+		System.out.println(session);
+		if (session == null) {
+			return "redirect:entrar";
+		}
 		if (new UserDAO().verificaLogin(usuario)) {
 			session.setAttribute("name", new UserDAO().getCurrentUser(usuario));
 			session.setAttribute("filtro", "");

@@ -67,6 +67,7 @@ public class NoteController {
 			filtro = "";
 		}
 		session.setAttribute("filtro", filtro);
+//		session.setAttribute("name", note.getUser());
 		return "notas";
 	}
 }

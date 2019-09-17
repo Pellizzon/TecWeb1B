@@ -20,4 +20,7 @@
 
 	<mvc:resources mapping="/Assets/**" location="/Assets/" />
 	<mvc:annotation-driven />
+	<mvc:interceptors>
+		<bean class="mvc.controller.AutorizadorInterceptor" />
+	</mvc:interceptors>
 </beans>
