@@ -43,7 +43,6 @@ public class LoginController {
 
 	@RequestMapping("efetuaLogin")
 	public String efetuaLogin(User usuario, HttpSession session) {
-		System.out.println(session);
 		if (session == null) {
 			return "redirect:entrar";
 		}
