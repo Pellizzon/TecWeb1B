@@ -103,7 +103,7 @@
 				Prioridade: ${note.priority}<br>
 				Tarefa: <span>${note.msg}</span>
 			</div>
-			<form action="edita" method="get" autocomplete="off">
+			<form action="edita_get" method="post" autocomplete="off">
 				<input type="hidden" name="user" value="<%=current_user%>" readonly>
 				<input type="hidden" name="date" value="<fmt:formatDate value="${note.date.time}" pattern="yyyy-MM-dd"/>" readonly>
 				<input type="hidden" name="priority" value="${note.priority}" readonly>

@@ -41,7 +41,7 @@
 	data = dateFormat.format(current_date.getTime());%>
 
 	<div style="float:right;">Logado como <%=current_user%> <a href="logout" class="sair">Sair</a></div>
-	<form action='edita' method='post' autocomplete="off">
+	<form action='edita_post' method='post' autocomplete="off">
 		<input type="hidden" name="user" value="<%=current_user%>" readonly>
 		<input type="hidden" name="id" value="<%=id%>" readonly>
 		Tarefa: 

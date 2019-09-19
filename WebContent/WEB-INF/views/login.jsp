@@ -14,7 +14,7 @@
 <body>
 
 	<div class="content">
-		<form action='efetuaLogin' method='get' autocomplete="off">
+		<form action='efetuaLogin' method='post' autocomplete="off">
 			Usuário: 
 			<input type='text' name='user' required='required' class="input-res"><br> 
 			Senha: 

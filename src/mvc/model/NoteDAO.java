@@ -15,10 +15,6 @@ public class NoteDAO {
 	String user = System.getenv("mysql_user");
 	String password = System.getenv("mysql_password");
 
-//	String url = "jdbc:mysql://localhost/meus_dados";
-//	String user = "root";
-//	String password = "38117111";
-
 	public NoteDAO() {
 
 		try {

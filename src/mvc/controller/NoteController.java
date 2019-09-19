@@ -32,7 +32,7 @@ public class NoteController {
 		return "notas";
 	}
 
-	@RequestMapping(value="edita", method = RequestMethod.GET)
+	@RequestMapping("edita_get")
 	public String editaGet(Notas note, HttpSession session) throws ParseException {
 		session.setAttribute("name", note.getUser());
 		String date = new NoteDAO().getCurrentDate(note);
@@ -47,7 +47,7 @@ public class NoteController {
 		return "editar";
 	}
 	
-	@RequestMapping(value="edita", method = RequestMethod.POST)
+	@RequestMapping("edita_post")
 	public String editaPost(Notas note) throws ParseException {
 		NoteDAO dao = new NoteDAO();
 		dao.updateNote(note);
